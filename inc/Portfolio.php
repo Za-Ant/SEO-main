@@ -15,5 +15,5 @@ include_once("Database.php");
                 } 
             }
     }
-   
+   $Portfolio = new Portfolio();
 ?>

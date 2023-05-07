@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/templatemo-seo-dream.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/obrazky.css">
 <!--
 
 TemplateMo 563 SEO Dream
@@ -48,7 +49,7 @@ https://templatemo.com/tm-563-seo-dream
               
               <li class="scroll-to-section"><a href="index.php" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="features.php">Features</a></li>
-              <li class="scroll-to-section"><a href="about_us.php">About Us</a></li>
+              <li class="scroll-to-section"><a href="about_as.php">About Us</a></li>
               <li class="scroll-to-section"><a href="services.php">Services</a></li>
               <li class="scroll-to-section"><a href="portfolio.php">Portfolio</a></li>
               <li class="scroll-to-section"><a href="contact.php">Contact Us</a></li> 
