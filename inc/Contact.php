@@ -1,5 +1,6 @@
 <?php
-    
+    // require('Database.php');
+
     class Contact{
         public $db;
         function __construct()
@@ -11,7 +12,6 @@
                 $query =  $this->db->conn->query("SELECT * FROM contact");
                 $contact = $query->fetchAll(PDO::FETCH_OBJ);
                 return $contact;
-
               }catch(PDOException $e){
                 print_r($e->getMessage());
             }   

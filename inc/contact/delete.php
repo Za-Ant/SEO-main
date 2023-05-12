@@ -6,6 +6,8 @@ if(isset($_POST['delete_contact'])){
         $id = $_POST["delete_contact"];
         $sql = $sql = 'DELETE FROM contact WHERE id ='.$id;
         $db->conn->exec($sql);
+        header("Location: ../../../admin.php");
+        exit(0);   
     }catch(PDOException $e){
         print_r($e->getMessage());
     }

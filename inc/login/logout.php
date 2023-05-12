@@ -1,7 +1,6 @@
 <?php
     session_start();
-     unset($_SESSION["user_name"]);
-     echo 'Boli ste odhlásení';
-    //session_destroy(); 
-    //header('URL = index.php');
+    session_destroy();
+    header("Location: ../../admin.php");
+    exit(0);
 ?>

@@ -1,5 +1,5 @@
 <?php
-require('../Database.php');
+//require('Database.php');
 $db =  new Database();
 if(isset($_POST['delete_portfolio'])){
     try{

@@ -12,4 +12,5 @@
             }
         }
     }
+    $db = new Database();
 ?>

@@ -9,9 +9,11 @@ if(isset($_POST['contact_us'])){
         'contact_message' => $_POST["contact_message"],
     ];
     try{
-        $query = "INSERT INTO contact (contact_name, contact_email,contact_message) VALUES (:contact_name, :contact_email,:contact_message)";
+        $query = "INSERT INTO contact (contact_name, contact_email, contact_message) 
+        VALUES (:contact_name, :contact_email,:contact_message)";
         $query_run = $db->conn->prepare($query);
         $query_run->execute($data);
+        header("Location: ../../contact.php");
     }catch(PDOException $e){
         print_r($e->getMessage());
     }   
