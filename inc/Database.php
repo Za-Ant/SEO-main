@@ -1,7 +1,7 @@
 <?php
-    class Database{
+    class Database
+    {
         public $conn;
-
         function __construct()
         {
             try{

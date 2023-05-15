@@ -1,11 +1,14 @@
 <?php
-    class Menu{
+    class Menu
+    {
         public $menu;
 
-        function __construct($menu){
+        function __construct($menu)
+        {
             $this->menu = $menu;
         }
-        function get_menu(){
+        function get_menu()
+        {
             return $this->menu;
         }
     }
@@ -15,10 +18,11 @@
                                   "Services"=>"services.php",
                                   "Portfolio"=>"portfolio.php",
                                   "Contact Us"=>"contact.php",
-                        ));
-    function print_menu($menu){
+                                ));
+    function print_menu($menu)
+    {
         $menu_items = $menu->get_menu();
-        foreach($menu_items as $page=>$url){
+        foreach ($menu_items as $page=>$url) {
             echo '<li><a href="'.$url.'">'.$page.'</a></li>';
         }
     }

@@ -1,18 +1,20 @@
 <?php
     // require('Database.php');
 
-    class Contact{
+    class Contact
+    {
         public $db;
         function __construct()
         {
             $this->db = new Database();
         }
-        function get_contact(){
+        function get_contact()
+        {
             try{
                 $query =  $this->db->conn->query("SELECT * FROM contact");
                 $contact = $query->fetchAll(PDO::FETCH_OBJ);
                 return $contact;
-              }catch(PDOException $e){
+            } catch (PDOException $e) {
                 print_r($e->getMessage());
             }   
         }
