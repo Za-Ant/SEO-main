@@ -19,4 +19,3 @@
         }
     }
     $User = new User(); 
-?>

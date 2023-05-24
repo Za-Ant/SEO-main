@@ -1,15 +1,19 @@
 <?php
-require('../Database.php');
-$db =  new Database();
-if (isset($_POST['delete_portfolio'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require_once('../Database.php');
+    $db = new Database();
     try {
-        $id = $_POST["delete_portfolio"];
-        $sql = $sql = 'DELETE FROM portfolio WHERE id ='.$id;
-        $db->conn->exec($sql);
+        $data = array(
+            ':id' => $_POST["portfolio_id"]
+        );
+        $stmt = $db->conn->prepare('DELETE FROM portfolio WHERE id=:id');
+        $stmt->execute($data);
         header("Location: ../../../admin.php");
-        exit(0);    
+        exit(0);
     } catch (PDOException $e) {
         print_r($e->getMessage());
-    }  
+    }
+} else {
+    header("Location: ../../../admin.php");
+    exit(0);
 }
-?>

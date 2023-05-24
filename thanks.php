@@ -1,5 +1,6 @@
   
   <?php
+  require_once ('inc/config.php');
     include('components/header.php');
   ?>
   <main> 
@@ -8,11 +9,10 @@
         <div class="col-100">
             <h1>Ďakujeme za Vaš kontact</h1>
             <a href="contact.php">Kontakty</a><br>
-            <a href="admin.php">Administrator</a>
+            <a href="regis.php">Administrator</a>
         </div>
       </div>
     </section>
   </main>
   <?php
     include('components/footer.php');
-  ?>

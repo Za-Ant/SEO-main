@@ -19,12 +19,3 @@
                                   "Portfolio"=>"portfolio.php",
                                   "Contact Us"=>"contact.php",
                                 ));
-    function print_menu($menu)
-    {
-        $menu_items = $menu->get_menu();
-        foreach ($menu_items as $page=>$url) {
-            echo '<li><a href="'.$url.'">'.$page.'</a></li>';
-        }
-    }
-    
-?>

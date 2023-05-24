@@ -1,7 +1,7 @@
 <?php
     // require('Database.php');
 
-    class Contact
+    class MyContact
     {
         public $db;
         function __construct()
@@ -19,6 +19,4 @@
             }   
         }
     }
-    $Contact = new Contact();
-    
-?>
+    $Contact = new MyContact();

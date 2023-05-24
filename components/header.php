@@ -13,15 +13,15 @@
     <title>SEO Dream - Creative SEO HTML5 Template by TemplateMo test</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=(!empty($relative_path)?$relative_path:"")?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-seo-dream.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/obrazky.css">
+    <link rel="stylesheet" href="<?=(!empty($relative_path)?$relative_path:"")?>assets/css/fontawesome.css">
+    <link rel="stylesheet" href="<?=(!empty($relative_path)?$relative_path:"")?>assets/css/templatemo-seo-dream.css">
+    <link rel="stylesheet" href="<?=(!empty($relative_path)?$relative_path:"")?>assets/css/animated.css">
+    <link rel="stylesheet" href="<?=(!empty($relative_path)?$relative_path:"")?>assets/css/owl.css">
+    <link rel="stylesheet" href="<?=(!empty($relative_path)?$relative_path:"")?>assets/css/obrazky.css">
 <!--
 
 TemplateMo 563 SEO Dream
@@ -41,19 +41,15 @@ https://templatemo.com/tm-563-seo-dream
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.php" class="logo">
-              <h4>SEO Dream <img src="assets/images/logo-icon.png" alt=""></h4> 
+              <h4>SEO Dream <img src="<?=(!empty($relative_path)?$relative_path:"")?>assets/images/logo-icon.png" alt=""></h4>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              
-              <li class="scroll-to-section"><a href="index.php" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="features.php">Features</a></li>
-              <li class="scroll-to-section"><a href="about_as.php">About Us</a></li>
-              <li class="scroll-to-section"><a href="services.php">Services</a></li>
-              <li class="scroll-to-section"><a href="portfolio.php">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="contact.php">Contact Us</a></li> 
-              
+                <?php $menu_items = $Header_menu->get_menu(); ?>
+                <?php foreach ($menu_items as $page=>$url):?>
+              <li class="scroll-to-section"><a href="<?=(!empty($relative_path)?$relative_path:"").$url?>" class="active"><?=$page?></a></li>
+                <?php endforeach; ?>
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>

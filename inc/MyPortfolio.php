@@ -1,6 +1,6 @@
 <?php
   include_once("Database.php");
-    class Portfolio 
+    class MyPortfolio
     {
         public $db;
 
@@ -16,5 +16,5 @@
             } 
         }
     }
-   $Portfolio = new Portfolio();
+   $Portfolio = new MyPortfolio();
 ?>

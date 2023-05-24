@@ -1,7 +1,7 @@
 <?php
+require_once ('inc/config.php');
 include('components/header.php');
 include('components/portf_baner.php');
-include_once('inc/Portfolio.php');
 ?>
 <main>
   <?php
@@ -25,4 +25,3 @@ include_once('inc/Portfolio.php');
 </main>
 <?php
 include('components/footer.php');
-?>
